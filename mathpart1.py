@@ -7,9 +7,7 @@ def answer():
     for i in range(100, 1000):
         for j in range(100, 1000):
             product = i*j
-            if product <= max_palindrome:
-                break
-            if is_palindrome(product):
+            if is_palindrome(product) and product > max_palindrome:
                 max_palindrome = product
 
     return max_palindrome
